@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/tracking.js"></script>
+<title>Datenschutz – WAO Vanilla Serum</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#2a1b13">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;500&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap"><a class="brand" href="/">EWAO PROJECT<small>by waodani</small></a></div>
+</header>
+<main class="simple">
+  <div class="wrap prose">
+    <h1>Datenschutz</h1>
+    <p>Diese Seite ist ein Studienprojekt. Wir erheben nur die Daten, die du im Early-Access-Formular selbst angibst (Name und E-Mail), und nutzen sie ausschließlich, um dich über den Launch zu informieren.</p>
+    <h2>Cookies und Tracking</h2>
+    <p>Mit deiner Zustimmung verwenden wir Google Analytics 4 (über Google Tag Manager) zur Reichweitenmessung und das Meta Pixel zur Messung von Werbekampagnen. Ohne Zustimmung werden keine Analyse- oder Marketing-Cookies gesetzt (Google Consent Mode v2).</p>
+    <p><button class="btn btn--small btn--ghost" type="button" id="reset-consent">Cookie-Einstellungen ändern</button></p>
+    <h2>Formular</h2>
+    <p>Das Formular wird von Fillout bereitgestellt. Deine Angaben werden dort gespeichert. Du kannst jederzeit die Löschung deiner Daten verlangen.</p>
+    <a class="btn" href="/">Zurück zur Seite</a>
+  </div>
+</main>
+<div class="consent" id="consent" hidden role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen">
+  <p>Wir verwenden Cookies für Statistik (Google Analytics) und Marketing (Meta). Du entscheidest, ob wir sie setzen dürfen.</p>
+  <div class="actions">
+    <button class="btn btn--small" type="button" data-consent="granted">Alle akzeptieren</button>
+    <button class="btn btn--small btn--ghost" type="button" data-consent="denied">Nur notwendige</button>
+  </div>
+</div>
+<script src="/assets/site.js" defer></script>
+<script>
+document.getElementById("reset-consent").addEventListener("click", function () {
+  document.getElementById("consent").hidden = false;
+});
+</script>
+</body>
+</html>

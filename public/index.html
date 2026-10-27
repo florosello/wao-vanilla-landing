@@ -3,17 +3,145 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WAO Vanilla Serum</title>
-<style>
-  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f6efe4;color:#3b2a1a;font-family:Georgia,serif;text-align:center;padding:16px}
-  h1{font-weight:400;letter-spacing:.08em;margin:0 0 .4em}
-  p{margin:0;opacity:.75}
-</style>
+<script src="/assets/tracking.js"></script>
+<title>WAO Vanilla Serum – EWAO Project</title>
+<meta name="description" content="Gesichtsserum mit Vanilla odorata aus dem ecuadorianischen Amazonas, 4 % Niacinamid, Aloe vera und Hyaluronsäure. Jetzt Early Access mit 15 % Launch-Rabatt sichern.">
+<meta property="og:title" content="WAO Vanilla Serum – EWAO Project">
+<meta property="og:description" content="Ruhige, strahlende Haut mit Vanille aus dem Amazonas.">
+<meta property="og:image" content="https://wao-vanilla-landing.pages.dev/assets/produkt-orchidee-1243.webp">
+<meta property="og:type" content="product">
+<meta name="theme-color" content="#2a1b13">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;500&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
-  <main>
-    <h1>WAO · Vanilla Serum</h1>
-    <p>Bald verfügbar.</p>
-  </main>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">EWAO PROJECT<small>by waodani</small></a>
+    <div class="header-actions">
+      <div class="lang" role="group" aria-label="Sprache / Idioma">
+        <button type="button" data-lang="de" aria-pressed="true">DE</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="btn btn--small" href="#early-access" data-cta="header" data-i18n="cta_short">Early Access</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1 data-i18n="hero_title">Ruhige, strahlende Haut mit Vanille aus dem Amazonas.</h1>
+        <p class="hero-lede" data-i18n="hero_lede">Das WAO Vanilla Serum verbindet Vanilla odorata aus dem ecuadorianischen Regenwald mit 4 % Niacinamid und Hyaluronsäure. Für trockene, fahle Haut, die natürliche Pflege will, ohne auf sichtbare Wirkung zu verzichten.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#early-access" data-cta="hero" data-i18n="cta">Early Access sichern</a>
+          <p class="hero-offer" data-i18n-html="hero_offer"><strong>15 % Rabatt</strong> zum Launch. 30 ml für 69 €.</p>
+        </div>
+      </div>
+      <div>
+        <div class="arch">
+          <video autoplay muted loop playsinline preload="metadata" poster="/assets/herkunft-poster.jpg" aria-label="Von der Vanille-Ernte im Regenwald bis zum fertigen Serum">
+            <source src="/assets/herkunft.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="arch-caption" data-i18n="hero_caption">Von der Ernte im Regenwald bis in die Flasche</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="formula" id="formel">
+    <div class="wrap">
+      <figure>
+        <img src="/assets/inhaltsstoffe-1264.webp" srcset="/assets/inhaltsstoffe-800.webp 800w, /assets/inhaltsstoffe-1264.webp 1264w" sizes="(max-width: 960px) 100vw, 640px" width="1264" height="832" loading="lazy" alt="Das Serum zwischen seinen Inhaltsstoffen: Vanilleschoten und Blüte, Hyaluronsäure, Niacinamid und Aloe vera">
+      </figure>
+      <div>
+        <h2 data-i18n="formula_title">Vier Wirkstoffe. Nichts, was deine Haut nicht braucht.</h2>
+        <p class="intro" data-i18n="formula_intro">Eine kurze, klare Formel: ein Pflanzenextrakt als Herzstück, ergänzt durch drei bewährte Wirkstoffe in wirksamer Konzentration.</p>
+        <ul class="actives">
+          <li><span class="pct">1 %</span><div><h3>Vanilla odorata</h3><p data-i18n="a1">Antioxidativer Extrakt, der die Haut vor Umweltstress schützt.</p></div></li>
+          <li><span class="pct">4 %</span><div><h3 data-i18n="a2_name">Niacinamid</h3><p data-i18n="a2">Verfeinert das Hautbild und gleicht den Teint aus.</p></div></li>
+          <li><span class="pct">2 %</span><div><h3 data-i18n="a3_name">Aloe vera</h3><p data-i18n="a3">Beruhigt und pflegt gereizte Haut.</p></div></li>
+          <li><span class="pct">0,5 %</span><div><h3 data-i18n="a4_name">Hyaluronsäure</h3><p data-i18n="a4">Bindet Feuchtigkeit für eine pralle, geschmeidige Haut.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="origin" id="herkunft">
+    <div class="wrap">
+      <div class="origin-head">
+        <h2 data-i18n="origin_title">Vom Regenwald bis auf deine Haut</h2>
+        <p data-i18n="origin_intro">Unsere Vanille wächst im ecuadorianischen Amazonas und wird gemeinsam mit der Waodani-Gemeinschaft von Hand geerntet. So entsteht jede Flasche:</p>
+      </div>
+      <ol class="steps">
+        <li><img src="/assets/schritt-1.webp" width="720" height="405" loading="lazy" alt="" ><h3 data-i18n="s1_t">Ernte</h3><p data-i18n="s1">Von Hand gepflückt, direkt im Regenwald.</p></li>
+        <li><img src="/assets/schritt-2.webp" width="720" height="405" loading="lazy" alt=""><h3 data-i18n="s2_t">Extraktion</h3><p data-i18n="s2">Die Schoten werden schonend extrahiert.</p></li>
+        <li><img src="/assets/schritt-3.webp" width="720" height="405" loading="lazy" alt=""><h3 data-i18n="s3_t">Abfüllung</h3><p data-i18n="s3">In Braunglas, das die Wirkstoffe vor Licht schützt.</p></li>
+        <li><img src="/assets/schritt-4.webp" width="720" height="405" loading="lazy" alt=""><h3 data-i18n="s4_t">Anwendung</h3><p data-i18n="s4">Morgens und abends drei bis vier Tropfen.</p></li>
+        <li><img src="/assets/schritt-5.webp" width="720" height="405" loading="lazy" alt=""><h3 data-i18n="s5_t">Versand</h3><p data-i18n="s5">Im Kartonetui zu dir nach Hause.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="people">
+    <div class="grid">
+      <figure>
+        <img src="/assets/anwenderinnen-1264.webp" srcset="/assets/anwenderinnen-800.webp 800w, /assets/anwenderinnen-1264.webp 1264w" sizes="(max-width: 960px) 100vw, 65vw" width="1264" height="832" loading="lazy" alt="Drei lächelnde Frauen mit unterschiedlichen Hauttönen halten das WAO Vanilla Serum">
+      </figure>
+      <div class="text">
+        <h2 data-i18n="people_title">Für jeden Hauttyp gemacht</h2>
+        <p data-i18n="people_body">Leicht, zieht schnell ein und klebt nicht. Unter der Tagescreme oder allein am Abend.</p>
+        <ul class="facts">
+          <li data-i18n="f1">30 ml im lichtgeschützten Braunglas</li>
+          <li data-i18n="f2">Für morgens und abends</li>
+          <li data-i18n="f3">Entwickelt für den deutschen Markt</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="lead" id="early-access">
+    <div class="wrap">
+      <div class="pitch">
+        <img src="/assets/produkt-orchidee-1243.webp" srcset="/assets/produkt-orchidee-800.webp 800w, /assets/produkt-orchidee-1243.webp 1243w" sizes="(max-width: 960px) 100vw, 560px" width="1243" height="848" loading="lazy" alt="Das WAO Vanilla Serum neben weißen Orchideen">
+        <h2 data-i18n="lead_title">Sei unter den Ersten in Deutschland</h2>
+        <p data-i18n="lead_body">Trag dich ein und erhalte vor dem Marktstart:</p>
+        <ul class="perks">
+          <li data-i18n="p1">15 % Rabatt auf deine erste Bestellung</li>
+          <li data-i18n="p2">Eine Gratisprobe zum Testen</li>
+          <li data-i18n="p3">Den Launch-Termin als Erste</li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <h3 data-i18n="form_title">Early Access sichern</h3>
+        <div id="fillout-slot">
+          <p class="form-placeholder" data-i18n="form_placeholder">Das Formular wird in Kürze freigeschaltet.</p>
+        </div>
+        <p class="privacy-note" data-i18n-html="privacy_note">Wir nutzen deine E-Mail nur für Infos zum Launch. Abmeldung jederzeit möglich. Mehr in der <a href="/datenschutz">Datenschutzerklärung</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p data-i18n="footer">EWAO Project by waodani. Studienprojekt, 2026.</p>
+    <p><a href="/datenschutz" data-i18n="privacy_link">Datenschutz</a></p>
+  </div>
+</footer>
+
+<div class="consent" id="consent" hidden role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen">
+  <p data-i18n="consent_text">Wir verwenden Cookies für Statistik (Google Analytics) und Marketing (Meta). Du entscheidest, ob wir sie setzen dürfen.</p>
+  <div class="actions">
+    <button class="btn btn--small" type="button" data-consent="granted" data-i18n="consent_yes">Alle akzeptieren</button>
+    <button class="btn btn--small btn--ghost" type="button" data-consent="denied" data-i18n="consent_no">Nur notwendige</button>
+  </div>
+</div>
+
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
