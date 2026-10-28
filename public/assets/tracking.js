@@ -20,18 +20,31 @@ function gtag() { window.dataLayer.push(arguments); }
 (function () {
   var stored = null;
   try { stored = localStorage.getItem("wao_consent"); } catch (e) {}
-  var state = stored === "granted" ? "granted" : "denied";
+  if (stored !== "granted" && stored !== "denied") stored = null;
 
-  // Google Consent Mode v2: nothing is stored until the visitor agrees (GDPR).
-  gtag("consent", "default", {
-    ad_storage: state,
-    ad_user_data: state,
-    ad_personalization: state,
-    analytics_storage: state,
-    functionality_storage: "granted",
-    security_storage: "granted",
-    wait_for_update: 500
-  });
+  // Google Consent Mode v2 (GDPR): in the EEA, UK and Switzerland nothing is
+  // stored until the visitor agrees. Elsewhere measurement is on by default.
+  // A visitor's own choice in the banner (stored) always wins.
+  var EEA = ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE",
+             "IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE",
+             "IS","LI","NO","GB","CH"];
+  if (stored) {
+    gtag("consent", "default", {
+      ad_storage: stored, ad_user_data: stored, ad_personalization: stored,
+      analytics_storage: stored, functionality_storage: "granted",
+      security_storage: "granted"
+    });
+  } else {
+    gtag("consent", "default", {
+      ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied",
+      analytics_storage: "denied", region: EEA, wait_for_update: 500
+    });
+    gtag("consent", "default", {
+      ad_storage: "granted", ad_user_data: "granted", ad_personalization: "granted",
+      analytics_storage: "granted", functionality_storage: "granted",
+      security_storage: "granted"
+    });
+  }
 
   if (window.WAO.GTM_ID) {
     (function (w, d, s, l, i) {
