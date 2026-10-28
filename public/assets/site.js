@@ -149,14 +149,14 @@
     document.body.appendChild(s);
   }
 
-  // Fillout talks to the page through postMessage. Any message from Fillout
-  // that mentions a submission counts as a lead (fired once per session).
+  // Fillout's embedded form posts { type: "form_submit", submissionUuid } to the
+  // parent page when it is sent. That is our Lead / form-submit conversion.
   window.addEventListener("message", function (e) {
     var host = "";
     try { host = new URL(e.origin).hostname; } catch (err) { return; }
     if (!/(^|\.)fillout\.com$/.test(host)) return;
-    var raw;
-    try { raw = typeof e.data === "string" ? e.data : JSON.stringify(e.data); } catch (err) { return; }
-    if (/submit/i.test(raw)) window.waoLead("fillout_embed");
+    var data = e.data;
+    if (typeof data === "string") { try { data = JSON.parse(data); } catch (err) { return; } }
+    if (data && data.type === "form_submit") window.waoLead("fillout_embed");
   });
 })();
