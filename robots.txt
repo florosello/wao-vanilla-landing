@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://wao-vanilla-landing.pages.dev/sitemap.xml
